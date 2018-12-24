@@ -5,7 +5,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\..\SectorSelection.Common\SectorSelection.Common.csproj" />
+    <ProjectReference Include="..\..\SectorSelection.Dtos\SectorSelection.Dtos.csproj" />
     <ProjectReference Include="..\SectorSelection.Repositories\SectorSelection.Repositories.csproj" />
   </ItemGroup>
 

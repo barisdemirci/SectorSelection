@@ -2,7 +2,11 @@
 
 namespace SectorSelection.Common
 {
-    public class Class1
+    public static class EndPoints
     {
+        public static class Api
+        {
+            public const string GetSectors = "api:getsectors";
+        }
     }
 }

@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.9" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.4" />
   </ItemGroup>
 
   <ItemGroup>
@@ -22,6 +23,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\SectorSelection.Common\SectorSelection.Common.csproj" />
+    <ProjectReference Include="..\..\SectorSelection.Core\SectorSelection.Core.csproj" />
+    <ProjectReference Include="..\..\SectorSelection.Dtos\SectorSelection.Dtos.csproj" />
   </ItemGroup>
 
   <Target Name="DebugRunWebpack" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('wwwroot\dist') ">

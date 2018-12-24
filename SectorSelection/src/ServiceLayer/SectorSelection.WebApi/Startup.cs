@@ -8,6 +8,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using SectorSelection.Entities;
+using SectorSelection.Mapper;
 
 namespace SectorSelection.WebApi
 {
@@ -24,6 +26,11 @@ namespace SectorSelection.WebApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+            services.AddSingleton(AutoMapperFactory.CreateAndConfigure());
+            using (var context = new ApplicationDbContext())
+            {
+                context.Database.EnsureCreated();
+            }
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

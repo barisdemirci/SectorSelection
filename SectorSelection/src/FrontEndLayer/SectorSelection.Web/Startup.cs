@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.SpaServices.Webpack;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using SectorSelection.Web.Extensions;
 
 namespace SectorSelection.Web
 {
@@ -17,17 +18,26 @@ namespace SectorSelection.Web
             Configuration = configuration;
         }
 
-        public IConfiguration Configuration { get; }
+        public IConfiguration Configuration { get; set; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+            services.AddServices();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
+            var builder = new ConfigurationBuilder()
+                .SetBasePath(env.ContentRootPath)
+                .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
+                .AddJsonFile("endpoints.json", optional: true, reloadOnChange: true)
+                .AddEnvironmentVariables();
+
+            Configuration = builder.Build();
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

@@ -3,3 +3,16 @@
 ################################################################################
 
 /SectorSelection/.vs/SectorSelection/v15/Server/sqlite3
+/SectorSelection/.vs
+/SectorSelection/src/SectorSelection.Core/obj
+/SectorSelection/src/SectorSelection.Dtos/obj
+/SectorSelection/src/ServiceLayer/SectorSelection.Entities/obj
+/SectorSelection/src/SectorSelection.Core/bin/Debug
+/SectorSelection/src/SectorSelection.Dtos/bin/Debug/netcoreapp2.0
+/SectorSelection/src/SectorSelection.Mapper/bin/Debug/netcoreapp2.0
+/SectorSelection/src/SectorSelection.Mapper/obj
+/SectorSelection/src/ServiceLayer/SectorSelection.Entities/bin/Debug
+/SectorSelection/src/ServiceLayer/SectorSelection.Repositories/bin/Debug/netcoreapp2.0
+/SectorSelection/src/ServiceLayer/SectorSelection.Repositories/obj/Debug/netcoreapp2.0
+/SectorSelection/src/ServiceLayer/SectorSelection.Services/bin/Debug/netcoreapp2.0
+/SectorSelection/src/ServiceLayer/SectorSelection.WebApi/bin/Debug/netcoreapp2.0

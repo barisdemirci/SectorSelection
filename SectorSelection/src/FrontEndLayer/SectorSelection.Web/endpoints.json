@@ -1,0 +1,5 @@
+{
+  "api": {
+    "getsectors": "rest/v1/getsectors"
+  }
+}
