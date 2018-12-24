@@ -18,3 +18,8 @@
 /SectorSelection/src/ServiceLayer/SectorSelection.WebApi/bin/Debug/netcoreapp2.0
 /SectorSelection/src/ServiceLayer/SectorSelection.Common/bin
 /SectorSelection/src/ServiceLayer/SectorSelection.Common/obj
+/SectorSelection/src/SectorSelection.Common/bin/Debug/netcoreapp2.0
+/SectorSelection/src/SectorSelection.Common/obj
+/SectorSelection/src/ServiceLayer/SectorSelection.Repositories/obj
+/SectorSelection/src/ServiceLayer/SectorSelection.Services/obj
+/SectorSelection/src/ServiceLayer/SectorSelection.WebApi/obj
