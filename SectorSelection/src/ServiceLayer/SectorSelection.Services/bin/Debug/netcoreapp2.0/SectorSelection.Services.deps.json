@@ -1,0 +1,47 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v2.0",
+    "signature": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v2.0": {
+      "SectorSelection.Services/1.0.0": {
+        "dependencies": {
+          "SectorSelection.Common": "1.0.0",
+          "SectorSelection.Repositories": "1.0.0"
+        },
+        "runtime": {
+          "SectorSelection.Services.dll": {}
+        }
+      },
+      "SectorSelection.Common/1.0.0": {
+        "runtime": {
+          "SectorSelection.Common.dll": {}
+        }
+      },
+      "SectorSelection.Repositories/1.0.0": {
+        "runtime": {
+          "SectorSelection.Repositories.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "SectorSelection.Services/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SectorSelection.Common/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SectorSelection.Repositories/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -1,0 +1,14 @@
+C:\Users\baris.demirci\source\repos\SectorSelection\SectorSelection\src\ServiceLayer\SectorSelection.Services\bin\Debug\netcoreapp2.0\SectorSelection.Services.deps.json
+C:\Users\baris.demirci\source\repos\SectorSelection\SectorSelection\src\ServiceLayer\SectorSelection.Services\bin\Debug\netcoreapp2.0\SectorSelection.Services.dll
+C:\Users\baris.demirci\source\repos\SectorSelection\SectorSelection\src\ServiceLayer\SectorSelection.Services\bin\Debug\netcoreapp2.0\SectorSelection.Services.pdb
+C:\Users\baris.demirci\source\repos\SectorSelection\SectorSelection\src\ServiceLayer\SectorSelection.Services\bin\Debug\netcoreapp2.0\SectorSelection.Common.dll
+C:\Users\baris.demirci\source\repos\SectorSelection\SectorSelection\src\ServiceLayer\SectorSelection.Services\bin\Debug\netcoreapp2.0\SectorSelection.Repositories.dll
+C:\Users\baris.demirci\source\repos\SectorSelection\SectorSelection\src\ServiceLayer\SectorSelection.Services\bin\Debug\netcoreapp2.0\SectorSelection.Common.pdb
+C:\Users\baris.demirci\source\repos\SectorSelection\SectorSelection\src\ServiceLayer\SectorSelection.Services\bin\Debug\netcoreapp2.0\SectorSelection.Repositories.pdb
+C:\Users\baris.demirci\source\repos\SectorSelection\SectorSelection\src\ServiceLayer\SectorSelection.Services\obj\Debug\netcoreapp2.0\SectorSelection.Services.csprojAssemblyReference.cache
+C:\Users\baris.demirci\source\repos\SectorSelection\SectorSelection\src\ServiceLayer\SectorSelection.Services\obj\Debug\netcoreapp2.0\SectorSelection.Services.csproj.CoreCompileInputs.cache
+C:\Users\baris.demirci\source\repos\SectorSelection\SectorSelection\src\ServiceLayer\SectorSelection.Services\obj\Debug\netcoreapp2.0\SectorSelection.Services.AssemblyInfoInputs.cache
+C:\Users\baris.demirci\source\repos\SectorSelection\SectorSelection\src\ServiceLayer\SectorSelection.Services\obj\Debug\netcoreapp2.0\SectorSelection.Services.AssemblyInfo.cs
+C:\Users\baris.demirci\source\repos\SectorSelection\SectorSelection\src\ServiceLayer\SectorSelection.Services\obj\Debug\netcoreapp2.0\SectorSelection.Services.csproj.CopyComplete
+C:\Users\baris.demirci\source\repos\SectorSelection\SectorSelection\src\ServiceLayer\SectorSelection.Services\obj\Debug\netcoreapp2.0\SectorSelection.Services.dll
+C:\Users\baris.demirci\source\repos\SectorSelection\SectorSelection\src\ServiceLayer\SectorSelection.Services\obj\Debug\netcoreapp2.0\SectorSelection.Services.pdb

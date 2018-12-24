@@ -1,0 +1,8 @@
+C:\Users\baris.demirci\source\repos\SectorSelection\SectorSelection\src\ServiceLayer\SectorSelection.Repositories\bin\Debug\netcoreapp2.0\SectorSelection.Repositories.deps.json
+C:\Users\baris.demirci\source\repos\SectorSelection\SectorSelection\src\ServiceLayer\SectorSelection.Repositories\bin\Debug\netcoreapp2.0\SectorSelection.Repositories.dll
+C:\Users\baris.demirci\source\repos\SectorSelection\SectorSelection\src\ServiceLayer\SectorSelection.Repositories\bin\Debug\netcoreapp2.0\SectorSelection.Repositories.pdb
+C:\Users\baris.demirci\source\repos\SectorSelection\SectorSelection\src\ServiceLayer\SectorSelection.Repositories\obj\Debug\netcoreapp2.0\SectorSelection.Repositories.csproj.CoreCompileInputs.cache
+C:\Users\baris.demirci\source\repos\SectorSelection\SectorSelection\src\ServiceLayer\SectorSelection.Repositories\obj\Debug\netcoreapp2.0\SectorSelection.Repositories.AssemblyInfoInputs.cache
+C:\Users\baris.demirci\source\repos\SectorSelection\SectorSelection\src\ServiceLayer\SectorSelection.Repositories\obj\Debug\netcoreapp2.0\SectorSelection.Repositories.AssemblyInfo.cs
+C:\Users\baris.demirci\source\repos\SectorSelection\SectorSelection\src\ServiceLayer\SectorSelection.Repositories\obj\Debug\netcoreapp2.0\SectorSelection.Repositories.dll
+C:\Users\baris.demirci\source\repos\SectorSelection\SectorSelection\src\ServiceLayer\SectorSelection.Repositories\obj\Debug\netcoreapp2.0\SectorSelection.Repositories.pdb

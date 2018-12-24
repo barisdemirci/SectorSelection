@@ -1,0 +1,8 @@
+C:\Users\baris.demirci\source\repos\SectorSelection\SectorSelection\src\SectorSelection.Common\bin\Debug\netcoreapp2.0\SectorSelection.Common.deps.json
+C:\Users\baris.demirci\source\repos\SectorSelection\SectorSelection\src\SectorSelection.Common\bin\Debug\netcoreapp2.0\SectorSelection.Common.dll
+C:\Users\baris.demirci\source\repos\SectorSelection\SectorSelection\src\SectorSelection.Common\bin\Debug\netcoreapp2.0\SectorSelection.Common.pdb
+C:\Users\baris.demirci\source\repos\SectorSelection\SectorSelection\src\SectorSelection.Common\obj\Debug\netcoreapp2.0\SectorSelection.Common.csproj.CoreCompileInputs.cache
+C:\Users\baris.demirci\source\repos\SectorSelection\SectorSelection\src\SectorSelection.Common\obj\Debug\netcoreapp2.0\SectorSelection.Common.AssemblyInfoInputs.cache
+C:\Users\baris.demirci\source\repos\SectorSelection\SectorSelection\src\SectorSelection.Common\obj\Debug\netcoreapp2.0\SectorSelection.Common.AssemblyInfo.cs
+C:\Users\baris.demirci\source\repos\SectorSelection\SectorSelection\src\SectorSelection.Common\obj\Debug\netcoreapp2.0\SectorSelection.Common.dll
+C:\Users\baris.demirci\source\repos\SectorSelection\SectorSelection\src\SectorSelection.Common\obj\Debug\netcoreapp2.0\SectorSelection.Common.pdb
