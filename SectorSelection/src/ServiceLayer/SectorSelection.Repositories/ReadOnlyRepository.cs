@@ -9,9 +9,9 @@ namespace SectorSelection.Repositories
     public class ReadOnlyRepository<TEntity> : IReadOnlyRepository<TEntity>
         where TEntity : class
     {
-        protected readonly ApplicationDbContext Context;
+        protected readonly DbContext Context;
 
-        public ReadOnlyRepository(ApplicationDbContext context)
+        public ReadOnlyRepository(DbContext context)
         {
             Context = context;
         }

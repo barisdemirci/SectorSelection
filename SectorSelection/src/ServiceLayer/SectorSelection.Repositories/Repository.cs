@@ -1,4 +1,5 @@
-﻿using SectorSelection.Entities;
+﻿using Microsoft.EntityFrameworkCore;
+using SectorSelection.Entities;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -9,7 +10,7 @@ namespace SectorSelection.Repositories
     public class Repository<TEntity> : ReadOnlyRepository<TEntity>, IRepository<TEntity>
          where TEntity : class
     {
-        public Repository(ApplicationDbContext context)
+        public Repository(DbContext context)
             : base(context)
         {
 
