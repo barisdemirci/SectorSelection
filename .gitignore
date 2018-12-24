@@ -16,3 +16,5 @@
 /SectorSelection/src/ServiceLayer/SectorSelection.Repositories/obj/Debug/netcoreapp2.0
 /SectorSelection/src/ServiceLayer/SectorSelection.Services/bin/Debug/netcoreapp2.0
 /SectorSelection/src/ServiceLayer/SectorSelection.WebApi/bin/Debug/netcoreapp2.0
+/SectorSelection/src/ServiceLayer/SectorSelection.Common/bin
+/SectorSelection/src/ServiceLayer/SectorSelection.Common/obj
