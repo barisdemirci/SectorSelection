@@ -11,6 +11,7 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.9" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.4" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
   </ItemGroup>
 
   <ItemGroup>
@@ -18,6 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\tool\SectorSelection.TestDataGenerator\SectorSelection.TestDataGenerator.csproj" />
     <ProjectReference Include="..\..\SectorSelection.Common\SectorSelection.Common.csproj" />
     <ProjectReference Include="..\..\SectorSelection.Dtos\SectorSelection.Dtos.csproj" />
     <ProjectReference Include="..\..\SectorSelection.Mapper\SectorSelection.Mapper.csproj" />

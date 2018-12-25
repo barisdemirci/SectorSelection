@@ -43,6 +43,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SectorSelection.Entities", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SectorSelection.Mapper", "src\SectorSelection.Mapper\SectorSelection.Mapper.csproj", "{C0048087-8D83-49F9-AD56-AD346418CE90}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tool", "tool", "{F3544EA5-81B9-4A61-BB50-E17B8A707743}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SectorSelection.TestDataGenerator", "tool\SectorSelection.TestDataGenerator\SectorSelection.TestDataGenerator.csproj", "{CBF446F1-64DE-4D70-BF6F-121859F57877}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -101,6 +105,10 @@ Global
 		{C0048087-8D83-49F9-AD56-AD346418CE90}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C0048087-8D83-49F9-AD56-AD346418CE90}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C0048087-8D83-49F9-AD56-AD346418CE90}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CBF446F1-64DE-4D70-BF6F-121859F57877}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBF446F1-64DE-4D70-BF6F-121859F57877}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBF446F1-64DE-4D70-BF6F-121859F57877}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBF446F1-64DE-4D70-BF6F-121859F57877}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -123,6 +131,7 @@ Global
 		{9E0367F2-A433-48A3-8F00-12CDE5636B2A} = {9E2584D5-A938-4C1D-85AB-144AE56412CF}
 		{B8199E08-1EF6-4FFF-84A4-E1888BBEDCB4} = {3781E0FA-5875-40E0-BE97-4E805A9DE9F4}
 		{C0048087-8D83-49F9-AD56-AD346418CE90} = {9E2584D5-A938-4C1D-85AB-144AE56412CF}
+		{CBF446F1-64DE-4D70-BF6F-121859F57877} = {F3544EA5-81B9-4A61-BB50-E17B8A707743}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5C4F07B9-74FE-4972-B298-0A70DA1FC761}

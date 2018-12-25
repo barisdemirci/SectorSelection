@@ -23,3 +23,5 @@
 /SectorSelection/src/ServiceLayer/SectorSelection.Repositories/obj
 /SectorSelection/src/ServiceLayer/SectorSelection.Services/obj
 /SectorSelection/src/ServiceLayer/SectorSelection.WebApi/obj
+/SectorSelection/tool/SectorSelection.TestDataGenerator/obj
+/SectorSelection/tool/SectorSelection.TestDataGenerator/bin/Debug/netcoreapp2.0

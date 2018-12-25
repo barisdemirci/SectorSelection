@@ -1,12 +1,17 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Newtonsoft.Json;
+using SectorSelection.Dtos;
 using SectorSelection.Entities;
+using SectorSelection.Entities.Sectors;
 using SectorSelection.Mapper;
+using SectorSelection.TestDataGenerator;
 using SectorSelection.WebApi.Extensions;
 
 namespace SectorSelection.WebApi
@@ -28,20 +33,6 @@ namespace SectorSelection.WebApi
             services.AddSingleton(AutoMapperFactory.CreateAndConfigure());
             services.AddDbContext<ApplicationDbContext>();
             services.AddScoped<DbContext>(sp => sp.GetService<ApplicationDbContext>());
-
-            using (var context = new ApplicationDbContext())
-            {
-                context.Database.EnsureCreated();
-                if (!context.Sectors.Any())
-                {
-                    context.Sectors.Add(new Entities.Sectors.Sector()
-                    {
-                        ParentId = null,
-                        SectorName = "Test"
-                    });
-                    context.SaveChanges();
-                }
-            }
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -50,9 +41,35 @@ namespace SectorSelection.WebApi
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+
+                using (var context = new ApplicationDbContext())
+                {
+                    context.Database.EnsureCreated();
+                    if (!context.Sectors.Any())
+                    {
+                        InsertSectors(context);
+                        context.SaveChanges();
+                    }
+                }
             }
 
             app.UseMvc();
+        }
+
+        private void InsertSectors(ApplicationDbContext context)
+        {
+            List<SectorDto> sectors = SectorDataGenerator.GenerateSectors();
+            foreach (var sector in sectors)
+            {
+                Sector newSector = new Sector()
+                {
+                    IsActive = sector.IsActive,
+                    SectorName = sector.SectorName,
+                    Value = sector.Value,
+                    Parent = context.Sectors.Local.FirstOrDefault(x => x.Value == sector.ParentId)
+                };
+                context.Sectors.Add(newSector);
+            }
         }
     }
 }
