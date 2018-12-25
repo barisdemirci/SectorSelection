@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using SectorSelection.Core;
 
 namespace SectorSelection.Web.Extensions
 {
@@ -14,8 +15,15 @@ namespace SectorSelection.Web.Extensions
         public static void AddServices(this IServiceCollection services)
         {
             services
-                .AddSingleton<IHttpClientWrapper, HttpClientWrapper>()
                 .AddTransient<ISectorService, SectorService>();
+        }
+
+        public static void AddHttpClientWrapper(this IServiceCollection services, IConfiguration configuration)
+        {
+            if (configuration == null) throw new ArgumentNullException(nameof(configuration));
+
+            services.AddSingleton<IHttpClientWrapper>(provider => new HttpClientWrapper(configuration));
+
         }
     }
 }

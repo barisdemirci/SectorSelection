@@ -9,7 +9,7 @@ using SectorSelection.Services.Sector;
 
 namespace SectorSelection.WebApi.Controllers
 {
-    [Route("rest/v1/sector")]
+    [Route("rest/v1/sectors")]
     public class SectorController : Controller
     {
         private readonly ISectorService sectorService;

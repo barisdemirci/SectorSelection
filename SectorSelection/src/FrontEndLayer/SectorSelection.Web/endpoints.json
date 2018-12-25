@@ -1,5 +1,5 @@
 {
   "api": {
-    "getsectors": "rest/v1/getsectors"
+    "getsectors": "rest/v1/sectors"
   }
 }
