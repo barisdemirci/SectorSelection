@@ -13,14 +13,9 @@ namespace SectorSelection.Web.Controllers
     {
         private readonly IUserSectorsService userSectorsService;
 
-        public UserSectorsController(IUserSectorsService sectorService)
+        public UserSectorsController(IUserSectorsService userSectorsService)
         {
-            this.userSectorsService = sectorService ?? throw new ArgumentNullException(nameof(sectorService));
-        }
-
-        public IActionResult Index()
-        {
-            return View();
+            this.userSectorsService = userSectorsService ?? throw new ArgumentNullException(nameof(userSectorsService));
         }
 
         [HttpGet]

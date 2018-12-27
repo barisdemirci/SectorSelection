@@ -37,3 +37,5 @@
 /SectorSelection/test/ServiceLayer/SectorSelection.Repositories.Tests/obj
 /SectorSelection/test/ServiceLayer/SectorSelection.Services.Tests/obj
 /SectorSelection/test/ServiceLayer/SectorSelection.WebApi.Tests/obj
+/SectorSelection/test/SectorSelection.Dtos.Builder/bin/Debug/netcoreapp2.0
+/SectorSelection/test/SectorSelection.Dtos.Builder/obj
