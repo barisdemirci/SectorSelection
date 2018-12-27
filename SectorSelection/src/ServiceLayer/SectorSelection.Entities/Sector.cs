@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
-namespace SectorSelection.Entities.Sectors
+namespace SectorSelection.Entities
 {
     public class Sector : BaseEntity
     {

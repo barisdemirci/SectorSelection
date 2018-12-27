@@ -9,5 +9,7 @@ namespace SectorSelection.Web.Services.Sector
     public interface ISectorService
     {
         Task<IEnumerable<SectorDto>> GetSectorsAsync();
+
+        Task SaveSelectedSectors(SaveSelectedSectorsDto selectedSectorDto);
     }
 }

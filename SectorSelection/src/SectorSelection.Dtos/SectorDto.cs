@@ -11,5 +11,9 @@
         public string SectorName { get; set; }
 
         public bool IsActive { get; set; }
+
+        public int Level { get; set; }
+
+        public SectorDto Parent { get; set; }
     }
 }

@@ -1,10 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using SectorSelection.Core.DependencyInjection;
 using SectorSelection.Entities;
-using SectorSelection.Repositories;
 using SectorSelection.Repositories.Sector;
-using SectorSelection.Services;
+using SectorSelection.Repositories.User;
+using SectorSelection.Repositories.UserSectors;
 using SectorSelection.Services.Sector;
 
 namespace SectorSelection.WebApi.Extensions
@@ -16,6 +15,8 @@ namespace SectorSelection.WebApi.Extensions
             services.AddScoped<DbContext, ApplicationDbContext>();
             services.AddTransient<ISectorService, SectorService>();
             services.AddTransient<ISectorRepository, SectorRepository>();
+            services.AddTransient<IUserRepository, UserRepository>();
+            services.AddTransient<IUserSectorsRepository, UserSectorsRepository>();
         }
     }
 }

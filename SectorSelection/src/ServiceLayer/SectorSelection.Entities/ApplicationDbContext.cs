@@ -1,8 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using SectorSelection.Entities.Sectors;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace SectorSelection.Entities
 {
@@ -25,5 +21,9 @@ namespace SectorSelection.Entities
         }
 
         public DbSet<Sector> Sectors { get; set; }
+
+        public DbSet<User> Users { get; set; }
+
+        public DbSet<UserSectors> UserSectors { get; set; }
     }
 }

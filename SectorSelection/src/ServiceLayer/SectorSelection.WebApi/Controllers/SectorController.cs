@@ -20,9 +20,16 @@ namespace SectorSelection.WebApi.Controllers
         }
 
         [HttpGet]
-        public async Task<IEnumerable<SectorDto>> GetSectors()
+        public async Task<IEnumerable<SectorDto>> GetSectorsAsync()
         {
             return await sectorService.GetSectorsAsync();
+        }
+
+        [HttpPost]
+        [Route("saveselectedsectors")]
+        public async Task SaveSelectedSectorsAsync([FromBody] SaveSelectedSectorsDto selectedSectorsDto)
+        {
+            await sectorService.SaveSelectedSectorsAsync(selectedSectorsDto);
         }
     }
 }

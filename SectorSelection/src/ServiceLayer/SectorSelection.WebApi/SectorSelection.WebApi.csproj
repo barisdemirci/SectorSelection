@@ -20,8 +20,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\tool\SectorSelection.TestDataGenerator\SectorSelection.TestDataGenerator.csproj" />
-    <ProjectReference Include="..\..\SectorSelection.Common\SectorSelection.Common.csproj" />
-    <ProjectReference Include="..\..\SectorSelection.Dtos\SectorSelection.Dtos.csproj" />
     <ProjectReference Include="..\..\SectorSelection.Mapper\SectorSelection.Mapper.csproj" />
     <ProjectReference Include="..\SectorSelection.Services\SectorSelection.Services.csproj" />
   </ItemGroup>

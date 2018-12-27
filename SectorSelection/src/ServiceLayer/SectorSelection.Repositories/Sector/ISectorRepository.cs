@@ -2,12 +2,11 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
-using SectorSelection.Entities.Sectors;
 
 namespace SectorSelection.Repositories.Sector
 {
-    public interface ISectorRepository
+    public interface ISectorRepository : IRepository<Entities.Sector>
     {
-        Task<IEnumerable<Entities.Sectors.Sector>> GetSectorsAsync();
+        Entities.Sector GetSectorByValue(int value);
     }
 }

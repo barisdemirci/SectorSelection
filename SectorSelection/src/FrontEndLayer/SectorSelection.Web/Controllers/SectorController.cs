@@ -24,5 +24,11 @@ namespace SectorSelection.Web.Controllers
         {
             return await sectorService.GetSectorsAsync();
         }
+
+        [HttpPost]
+        public async Task SaveSelectedSectors([FromBody] SaveSelectedSectorsDto selectedSectorsDto)
+        {
+            await sectorService.SaveSelectedSectors(selectedSectorsDto);
+        }
     }
 }

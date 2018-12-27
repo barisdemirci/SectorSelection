@@ -1,9 +1,6 @@
 ﻿using AutoMapper;
 using SectorSelection.Dtos;
-using SectorSelection.Entities.Sectors;
-using System;
-using System.Collections.Generic;
-using System.Text;
+using SectorSelection.Entities;
 
 namespace SectorSelection.Mapper.Profiles
 {

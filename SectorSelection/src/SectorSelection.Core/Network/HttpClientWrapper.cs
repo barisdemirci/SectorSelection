@@ -12,6 +12,8 @@ namespace SectorSelection.Core.Network
 {
     public class HttpClientWrapper : IHttpClientWrapper
     {
+        private readonly Encoding Encoding = Encoding.UTF8;
+        private const string ApplicationJson = "application/json";
         private readonly IConfiguration configuration;
 
         public HttpClientWrapper(IConfiguration configuration)
@@ -44,19 +46,22 @@ namespace SectorSelection.Core.Network
             return JsonConvert.DeserializeObject<TDto>(dataObjects);
         }
 
-        public Task<TDto> PostAsync<TDto>(string endpoint, TDto dto)
+        public async Task<TDto> PostAsync<TDto>(string endpoint, TDto dto)
         {
-            throw new NotImplementedException();
+            return await PostAsync<TDto, TDto>(endpoint, dto);
         }
 
-        public Task<TResponseDto> PostAsync<TResponseDto>(string endpoint)
+        public async Task<TResponseDto> PostAsync<TRequestDto, TResponseDto>(string endpoint, TRequestDto dto)
         {
-            throw new NotImplementedException();
-        }
+            endpoint = string.Concat(this.configuration[Constants.ApiBaseUrl], endpoint);
+            HttpClient client = new HttpClient();
+            client.BaseAddress = new Uri(endpoint);
 
-        public Task<TResponseDto> PostAsync<TRequestDto, TResponseDto>(string endpoint, TRequestDto dto)
-        {
-            throw new NotImplementedException();
+            string content = JsonConvert.SerializeObject(dto);
+            HttpContent httpContent = new StringContent(content, Encoding, ApplicationJson);
+            HttpResponseMessage responseMessage = await client.PostAsync(endpoint, httpContent);
+            var data = await responseMessage.Content.ReadAsStringAsync();
+            return JsonConvert.DeserializeObject<TResponseDto>(data);
         }
 
         public Task PostAsync(string endpoint)

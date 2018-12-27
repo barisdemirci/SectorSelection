@@ -9,6 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\SectorSelection.Common\SectorSelection.Common.csproj" />
     <ProjectReference Include="..\ServiceLayer\SectorSelection.Entities\SectorSelection.Entities.csproj" />
   </ItemGroup>
 

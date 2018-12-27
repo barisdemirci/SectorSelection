@@ -4,20 +4,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using SectorSelection.Entities;
-using SectorSelection.Entities.Sectors;
 
 namespace SectorSelection.Repositories.Sector
 {
-    public class SectorRepository : Repository<Entities.Sectors.Sector>, ISectorRepository
+    public class SectorRepository : Repository<Entities.Sector>, ISectorRepository
     {
         public SectorRepository(ApplicationDbContext context) : base(context)
         {
 
         }
 
-        public async Task<IEnumerable<Entities.Sectors.Sector>> GetSectorsAsync()
+        public Entities.Sector GetSectorByValue(int value)
         {
-            return await GetAllAsync();
+            return Context.Set<Entities.Sector>().FirstOrDefault(x => x.Value == value);
         }
     }
 }

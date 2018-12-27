@@ -6,7 +6,6 @@ C:\Users\baris.demirci\source\repos\SectorSelection\SectorSelection\test\Service
 C:\Users\baris.demirci\source\repos\SectorSelection\SectorSelection\test\ServiceLayer\SectorSelection.Repositories.Tests\bin\Debug\netcoreapp2.1\SectorSelection.Repositories.Tests.runtimeconfig.dev.json
 C:\Users\baris.demirci\source\repos\SectorSelection\SectorSelection\test\ServiceLayer\SectorSelection.Repositories.Tests\bin\Debug\netcoreapp2.1\SectorSelection.Repositories.Tests.dll
 C:\Users\baris.demirci\source\repos\SectorSelection\SectorSelection\test\ServiceLayer\SectorSelection.Repositories.Tests\bin\Debug\netcoreapp2.1\SectorSelection.Repositories.Tests.pdb
-C:\Users\baris.demirci\source\repos\SectorSelection\SectorSelection\test\ServiceLayer\SectorSelection.Repositories.Tests\obj\Debug\netcoreapp2.1\SectorSelection.Repositories.Tests.csprojAssemblyReference.cache
 C:\Users\baris.demirci\source\repos\SectorSelection\SectorSelection\test\ServiceLayer\SectorSelection.Repositories.Tests\obj\Debug\netcoreapp2.1\SectorSelection.Repositories.Tests.csproj.CoreCompileInputs.cache
 C:\Users\baris.demirci\source\repos\SectorSelection\SectorSelection\test\ServiceLayer\SectorSelection.Repositories.Tests\obj\Debug\netcoreapp2.1\SectorSelection.Repositories.Tests.AssemblyInfoInputs.cache
 C:\Users\baris.demirci\source\repos\SectorSelection\SectorSelection\test\ServiceLayer\SectorSelection.Repositories.Tests\obj\Debug\netcoreapp2.1\SectorSelection.Repositories.Tests.AssemblyInfo.cs

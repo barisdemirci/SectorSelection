@@ -9,11 +9,7 @@ namespace SectorSelection.Core.Network
     {
         Task<TDto> PostAsync<TDto>(string endpoint, TDto dto);
 
-        Task<TResponseDto> PostAsync<TResponseDto>(string endpoint);
-
         Task<TResponseDto> PostAsync<TRequestDto, TResponseDto>(string endpoint, TRequestDto dto);
-
-        Task PostAsync(string endpoint);
 
         Task<TDto> GetAsync<TDto>(string endpoint);
 
