@@ -33,3 +33,7 @@
 /SectorSelection/test/ServiceLayer/SectorSelection.Repositories.Tests/bin/Debug/netcoreapp2.0
 /SectorSelection/test/ServiceLayer/SectorSelection.Services.Tests/bin/Debug/netcoreapp2.0
 /SectorSelection/test/ServiceLayer/SectorSelection.WebApi.Tests/bin/Debug/netcoreapp2.0
+/SectorSelection/test/FrontEndLayer/SectorSelection.Web.Tests/obj
+/SectorSelection/test/ServiceLayer/SectorSelection.Repositories.Tests/obj
+/SectorSelection/test/ServiceLayer/SectorSelection.Services.Tests/obj
+/SectorSelection/test/ServiceLayer/SectorSelection.WebApi.Tests/obj
