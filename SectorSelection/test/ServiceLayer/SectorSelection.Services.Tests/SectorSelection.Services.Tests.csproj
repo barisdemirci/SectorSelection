@@ -14,4 +14,11 @@
     <PackageReference Include="xunit.runner.visualstudio" Version="2.4.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\src\SectorSelection.Dtos\SectorSelection.Dtos.csproj" />
+    <ProjectReference Include="..\..\..\src\SectorSelection.Mapper\SectorSelection.Mapper.csproj" />
+    <ProjectReference Include="..\..\..\src\ServiceLayer\SectorSelection.Services\SectorSelection.Services.csproj" />
+    <ProjectReference Include="..\..\SectorSelection.Dtos.Builder\SectorSelection.Dtos.Builder.csproj" />
+  </ItemGroup>
+
 </Project>
