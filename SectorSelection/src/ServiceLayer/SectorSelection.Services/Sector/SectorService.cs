@@ -45,7 +45,7 @@ namespace SectorSelection.Services.Sector
                         user = unitOfWork.Context.Users.Local.First(x => x.Name == selectedSectorsDto.Name);
                     }
 
-                    IEnumerable<UserSectors> userSectors = unitOfWork.UserSectorsRepository.GetSectorByUserId(user.UserId);
+                    IEnumerable<Entities.UserSectors> userSectors = unitOfWork.UserSectorsRepository.GetSectorByUserId(user.UserId);
                     if (userSectors.Any())
                     {
                         foreach (var userSector in userSectors)

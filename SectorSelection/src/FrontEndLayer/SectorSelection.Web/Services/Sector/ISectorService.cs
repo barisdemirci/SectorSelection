@@ -10,6 +10,6 @@ namespace SectorSelection.Web.Services.Sector
     {
         Task<IEnumerable<SectorDto>> GetSectorsAsync();
 
-        Task SaveSelectedSectors(SaveSelectedSectorsDto selectedSectorDto);
+        Task SaveSelectedSectorsAsync(SaveSelectedSectorsDto selectedSectorDto);
     }
 }

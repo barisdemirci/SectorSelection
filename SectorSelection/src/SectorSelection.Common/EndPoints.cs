@@ -8,6 +8,7 @@ namespace SectorSelection.Common
         {
             public const string GetSectors = "api:getsectors";
             public const string SaveSelectedSectors = "api:saveselectedsectors";
+            public const string GetUserSectors = "api:getusersectors";
         }
     }
 }

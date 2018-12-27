@@ -25,3 +25,11 @@
 /SectorSelection/src/ServiceLayer/SectorSelection.WebApi/obj
 /SectorSelection/tool/SectorSelection.TestDataGenerator/obj
 /SectorSelection/tool/SectorSelection.TestDataGenerator/bin/Debug/netcoreapp2.0
+/SectorSelection/test/FrontEndLayer/SectorSelection.Web.Tests/obj/Debug/netcoreapp2.1
+/SectorSelection/test/ServiceLayer/SectorSelection.Repositories.Tests/obj/Debug/netcoreapp2.1
+/SectorSelection/test/ServiceLayer/SectorSelection.Services.Tests/obj/Debug/netcoreapp2.1
+/SectorSelection/test/ServiceLayer/SectorSelection.WebApi.Tests/obj/Debug/netcoreapp2.1
+/SectorSelection/test/FrontEndLayer/SectorSelection.Web.Tests/bin/Debug/netcoreapp2.0
+/SectorSelection/test/ServiceLayer/SectorSelection.Repositories.Tests/bin/Debug/netcoreapp2.0
+/SectorSelection/test/ServiceLayer/SectorSelection.Services.Tests/bin/Debug/netcoreapp2.0
+/SectorSelection/test/ServiceLayer/SectorSelection.WebApi.Tests/bin/Debug/netcoreapp2.0

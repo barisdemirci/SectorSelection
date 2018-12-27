@@ -37,7 +37,7 @@ namespace SectorSelection.Web.Services.Sector
             return orderedList;
         }
 
-        public async Task SaveSelectedSectors(SaveSelectedSectorsDto selectedSectorDto)
+        public async Task SaveSelectedSectorsAsync(SaveSelectedSectorsDto selectedSectorDto)
         {
             string saveSelectedSectorsUrl = configuration[EndPoints.Api.SaveSelectedSectors];
             await httpClient.PostAsync<SaveSelectedSectorsDto>(saveSelectedSectorsUrl, selectedSectorDto);
