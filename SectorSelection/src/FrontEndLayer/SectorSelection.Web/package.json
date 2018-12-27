@@ -6,6 +6,7 @@
     "@types/history": "4.6.0",
     "@types/jquery": "^3.3.29",
     "@types/react": "15.0.35",
+    "@types/react-bootstrap-table": "^4.3.5",
     "@types/react-dom": "15.5.1",
     "@types/react-hot-loader": "3.0.3",
     "@types/react-redux": "4.4.45",
@@ -39,5 +40,8 @@
     "webpack": "2.5.1",
     "webpack-hot-middleware": "2.18.2",
     "webpack-merge": "4.1.0"
+  },
+  "dependencies": {
+    "react-bootstrap-table": "^4.3.1"
   }
 }

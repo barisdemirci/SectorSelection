@@ -29,7 +29,7 @@ namespace SectorSelection.Web.Services.Sector
                 item.Level = CalculateLevel(item);
                 for (int i = 0; i < item.Level; i++)
                 {
-                    item.SectorName = item.SectorName.Insert(0, "\xA0\xA0\xA0\xA0\xA0\xA0\xA0\xA0");
+                    item.SectorName = item.SectorName.Insert(0, "\xA0\xA0");
                 }
             }
             List<SectorDto> orderedList = new List<SectorDto>();

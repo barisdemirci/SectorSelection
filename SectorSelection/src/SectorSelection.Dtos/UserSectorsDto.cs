@@ -8,6 +8,6 @@ namespace SectorSelection.Dtos
     {
         public string UserName { get; set; }
 
-        public string SectorName { get; set; }
+        public IEnumerable<SectorDto> Sectors { get; set; }
     }
 }

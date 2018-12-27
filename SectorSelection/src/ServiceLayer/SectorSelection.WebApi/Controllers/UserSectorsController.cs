@@ -14,9 +14,9 @@ namespace SectorSelection.WebApi.Controllers
     {
         private readonly IUserSectorsService userSectorsService;
 
-        public UserSectorsController(IUserSectorsService sectorService)
+        public UserSectorsController(IUserSectorsService userSectorsService)
         {
-            this.userSectorsService = sectorService ?? throw new ArgumentNullException(nameof(sectorService));
+            this.userSectorsService = userSectorsService ?? throw new ArgumentNullException(nameof(userSectorsService));
         }
 
         [HttpGet]

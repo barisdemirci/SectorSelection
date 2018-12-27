@@ -1,9 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using SectorSelection.Core.DependencyInjection;
 using SectorSelection.Services.Sector;
-using System;
-using System.Collections.Generic;
-using System.Text;
+using SectorSelection.Services.UserSectors;
 
 namespace SectorSelection.Services
 {
@@ -12,6 +10,7 @@ namespace SectorSelection.Services
         private readonly IServiceRegistration[] serviceRegistrations =
         {
             new SectorServicesRegistration(),
+            new UserSectorsServicesRegistration()
         };
 
         public void Register(IServiceCollection services)

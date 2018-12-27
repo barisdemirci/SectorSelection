@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using AutoMapper;
 using SectorSelection.Dtos;
 using SectorSelection.Repositories.UserSectors;
@@ -19,8 +20,18 @@ namespace SectorSelection.Services.UserSectors
 
         public IEnumerable<UserSectorsDto> GetUserSectors()
         {
-            var userSectors = userSectorsRepository.GetAllAsync();
-            return mapper.Map<IEnumerable<UserSectorsDto>>(userSectors);
+            var userSectors = userSectorsRepository.GetSelectedUserSectors();
+            var grouppedList = userSectors.GroupBy(x => x.UserName);
+            List<UserSectorsDto> list = new List<UserSectorsDto>();
+            foreach (var item in grouppedList)
+            {
+                list.Add(new UserSectorsDto()
+                {
+                    UserName = item.Key,
+                    Sectors = item.Select(x => new SectorDto { SectorName = x.SectorName }),
+                });
+            }
+            return list;
         }
     }
 }

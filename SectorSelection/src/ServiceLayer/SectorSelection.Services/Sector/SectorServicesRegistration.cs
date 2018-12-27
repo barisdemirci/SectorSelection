@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using SectorSelection.Core.DependencyInjection;
+using SectorSelection.Services.UserSectors;
 using System;
 namespace SectorSelection.Services.Sector
 {

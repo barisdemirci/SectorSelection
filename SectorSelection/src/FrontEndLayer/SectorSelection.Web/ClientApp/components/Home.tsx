@@ -2,7 +2,6 @@ import * as React from 'react';
 import { RouteComponentProps } from 'react-router-dom';
 import { fetch } from 'domain-task';
 export interface HomeState { sectors: Sector[], name: string, selectedSectors: string[], isLoaded: boolean, agreed: boolean, formValidations: HomeValidation };
-import * as $ from 'jquery';
 
 const formValid = (formValidations: any, selectedSectors: string[]) => {
     let valid = true;

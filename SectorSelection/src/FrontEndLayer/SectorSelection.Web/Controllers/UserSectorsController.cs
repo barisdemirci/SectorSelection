@@ -8,6 +8,7 @@ using SectorSelection.Web.Services.UserSectors;
 
 namespace SectorSelection.Web.Controllers
 {
+    [Route("usersectors")]
     public class UserSectorsController : Controller
     {
         private readonly IUserSectorsService userSectorsService;

@@ -7,5 +7,7 @@ namespace SectorSelection.Repositories.UserSectors
     public interface IUserSectorsRepository : IRepository<Entities.UserSectors>
     {
         IEnumerable<Entities.UserSectors> GetSectorByUserId(int userId);
+
+        IEnumerable<Entities.SelectedUserSector> GetSelectedUserSectors();
     }
 }

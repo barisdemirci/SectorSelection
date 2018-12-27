@@ -2,6 +2,6 @@
   "api": {
     "getsectors": "rest/v1/sectors",
     "saveselectedsectors": "rest/v1/sectors/saveselectedsectors",
-    "getusersectors": "rest/v1/sectors/saveselectedsectors"
+    "getusersectors": "rest/v1/usersectors"
   }
 }

@@ -5,6 +5,7 @@ using SectorSelection.Repositories.Sector;
 using SectorSelection.Repositories.User;
 using SectorSelection.Repositories.UserSectors;
 using SectorSelection.Services.Sector;
+using SectorSelection.Services.UserSectors;
 
 namespace SectorSelection.WebApi.Extensions
 {
@@ -14,6 +15,7 @@ namespace SectorSelection.WebApi.Extensions
         {
             services.AddScoped<DbContext, ApplicationDbContext>();
             services.AddTransient<ISectorService, SectorService>();
+            services.AddTransient<IUserSectorsService, UserSectorsService>();
             services.AddTransient<ISectorRepository, SectorRepository>();
             services.AddTransient<IUserRepository, UserRepository>();
             services.AddTransient<IUserSectorsRepository, UserSectorsRepository>();
