@@ -3,60 +3,42 @@ using SectorSelection.Entities;
 using SectorSelection.Repositories.Sector;
 using SectorSelection.Repositories.User;
 using SectorSelection.Repositories.UserSectors;
+using System.Threading.Tasks;
 
 namespace SectorSelection.Repositories.UnitOfWork
 {
-    public sealed class UnitOfWork : DisposableObject
+    public sealed class UnitOfWork : DisposableObject, IUnitOfWork
     {
-        private ApplicationDbContext context = new ApplicationDbContext();
-        private SectorRepository sectorRepository;
-        private UserRepository userRepository;
-        private UserSectorsRepository userSectorsRepository;
-
+        private readonly ApplicationDbContext context;
         public ApplicationDbContext Context { get { return context; } }
 
-        public SectorRepository SectorRepository
+        public UnitOfWork(ApplicationDbContext context)
         {
-            get
-            {
-
-                if (this.sectorRepository == null)
-                {
-                    this.sectorRepository = new SectorRepository(context);
-                }
-                return sectorRepository;
-            }
+            this.context = context;
+            Sectors = new SectorRepository(context);
+            Users = new UserRepository(context);
+            UserSectors = new UserSectorsRepository(context);
         }
 
-        public UserRepository UserRepository
+        public ISectorRepository Sectors
         {
-            get
-            {
-
-                if (this.userRepository == null)
-                {
-                    this.userRepository = new UserRepository(context);
-                }
-                return userRepository;
-            }
+            get; private set;
         }
 
-        public UserSectorsRepository UserSectorsRepository
+        public IUserRepository Users
         {
-            get
-            {
-
-                if (this.userSectorsRepository == null)
-                {
-                    this.userSectorsRepository = new UserSectorsRepository(context);
-                }
-                return userSectorsRepository;
-            }
+            get;
+            private set;
         }
 
-        public void Save()
+        public IUserSectorsRepository UserSectors
         {
-            context.SaveChanges();
+            get; private set;
+        }
+
+        public async Task SaveAsync()
+        {
+            await context.SaveChangesAsync();
         }
 
         private bool disposed = false;

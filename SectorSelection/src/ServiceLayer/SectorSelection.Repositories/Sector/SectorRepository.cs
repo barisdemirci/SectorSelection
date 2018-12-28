@@ -9,6 +9,14 @@ namespace SectorSelection.Repositories.Sector
 {
     public class SectorRepository : Repository<Entities.Sector>, ISectorRepository
     {
+        public ApplicationDbContext ApplicationDbContext
+        {
+            get
+            {
+                return Context as ApplicationDbContext;
+            }
+        }
+
         public SectorRepository(ApplicationDbContext context) : base(context)
         {
 
@@ -16,7 +24,7 @@ namespace SectorSelection.Repositories.Sector
 
         public Entities.Sector GetSectorByValue(int value)
         {
-            return Context.Set<Entities.Sector>().FirstOrDefault(x => x.Value == value);
+            return ApplicationDbContext.Set<Entities.Sector>().FirstOrDefault(x => x.Value == value);
         }
     }
 }

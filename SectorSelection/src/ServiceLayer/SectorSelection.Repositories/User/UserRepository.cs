@@ -7,6 +7,14 @@ namespace SectorSelection.Repositories.User
 {
     public class UserRepository : Repository<Entities.User>, IUserRepository
     {
+        public ApplicationDbContext ApplicationDbContext
+        {
+            get
+            {
+                return Context as ApplicationDbContext;
+            }
+        }
+
         public UserRepository(ApplicationDbContext context) : base(context)
         {
 
@@ -14,7 +22,7 @@ namespace SectorSelection.Repositories.User
 
         public Entities.User GetUserByName(string name)
         {
-            return Context.Set<Entities.User>().FirstOrDefault(x => x.Name == name);
+            return ApplicationDbContext.Set<Entities.User>().FirstOrDefault(x => x.Name == name);
         }
     }
 }
