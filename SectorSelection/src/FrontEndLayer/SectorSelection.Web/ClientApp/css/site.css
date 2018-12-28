@@ -19,8 +19,17 @@
     z-index: 1;
 }
 
-.divbreak {
+.clear {
     margin-top: 10px;
+    height: 50px;
+}
+
+.sectors{
+    height:300px!important;
+}
+
+.name{
+    display:block;
 }
 
 @media (max-width: 767px) {

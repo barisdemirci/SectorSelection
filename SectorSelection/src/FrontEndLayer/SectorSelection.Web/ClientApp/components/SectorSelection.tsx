@@ -95,14 +95,13 @@ export default class SectorSelection extends React.Component<RouteComponentProps
                             </div>
                         </div>
                     </div>
-                    <br />
-                    <br />
+                    <div className="clear"/>
                     <div className="sector">
                         <div className="col-sm-2">
                             <label htmlFor="sectors">Sectors:</label>
                         </div>
                         <div className="col-sm-4">
-                            <select id="sectors" name="sectors" multiple onChange={this.sectorSelected.bind(this)} className={formValidations.sector.length == 0 ? "" : "error"}>
+                            <select id="sectors" name="sectors" multiple onChange={this.sectorSelected.bind(this)} className={formValidations.sector.length == 0 ? "sectors" : "error"}>
                                 {this.state.sectors.map(item =>
                                     <option key={item.value} value={item.value}>{item.sectorName}</option>
                                 )}
@@ -113,8 +112,7 @@ export default class SectorSelection extends React.Component<RouteComponentProps
                             </div>
                         </div>
                     </div>
-                    <br />
-                    <br />
+                    <div className="clear" />
                     <div className="col-sm-12">
                         <input id="agreed" type="checkbox" name="agreed" />
                         <label htmlFor="agreed"> Agree to terms </label>
@@ -123,8 +121,7 @@ export default class SectorSelection extends React.Component<RouteComponentProps
                                 <span>{formValidations.agreed}</span>}
                         </div>
                     </div>
-                    <br />
-                    <br />
+                    <div className="clear" />
                     <div className="col-sm-6 pull-right">
                         <input className="buttonSave" type="submit" value="Save" />
                     </div>
