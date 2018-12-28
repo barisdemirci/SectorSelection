@@ -198,7 +198,8 @@ export default class SectorSelection extends React.Component<RouteComponentProps
             method: "POST",
             headers: requestHeaders,
             body: JSON.stringify(data)
-        });
+        })
+            .then(res => alert("Successfully!"));
     }
 }
 
