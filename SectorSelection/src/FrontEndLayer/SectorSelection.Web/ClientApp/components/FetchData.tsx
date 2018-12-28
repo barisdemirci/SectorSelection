@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Link, RouteComponentProps } from 'react-router-dom';
+import { NavLink, Link, RouteComponentProps } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { ApplicationState } from '../store';
 import * as WeatherForecastsState from '../store/WeatherForecasts';
@@ -48,7 +48,7 @@ class FetchData extends React.Component<WeatherForecastProps, FetchState> {
     public render() {
         var state = this.state;
         return <div>
-            <h1>User Sectors</h1>
+            <h1>User's Sectors</h1>
             <p>This component shows users with sectors. You can edit sectors by clicking related row</p>
             {this.renderBootStrap(state.userSectors)}
         </div>;
@@ -57,7 +57,7 @@ class FetchData extends React.Component<WeatherForecastProps, FetchState> {
     private renderBootStrap(sectors: any) {
         const options: any = {
             expandRowBgColor: 'rgb(242, 255, 163)',
-            expandBy: 'column'  // Currently, available value is row and column, default is row
+            expandBy: 'column'
         };
 
         return <BootstrapTable data={sectors} version='4'
@@ -67,7 +67,40 @@ class FetchData extends React.Component<WeatherForecastProps, FetchState> {
             expandComponent={this.expandComponent}
             search>
             <TableHeaderColumn dataField='userName' isKey>User Name</TableHeaderColumn>
+            <TableHeaderColumn expandable={false} dataFormat={this.editSection}>
+                Edit
+            </TableHeaderColumn>
         </BootstrapTable>
+    }
+
+    private onClickProductSelected(cell: any, row: any) {
+        var a = "2";
+    }
+
+    private buttonFormatter(cell: any, row: any) {
+        var self = this;
+        return (<button
+            type="button"
+            onClick={
+                () =>
+                    self.onClickProductSelected(cell, row)
+            }
+        >
+            Edit
+        </button>);
+    }
+
+    private navigateButton(row: any) {
+        var data = row;
+    }
+
+    private editSection(cell: any, row: any) {
+        var data: any = { userName: row.userName, sectors: row.sectors };
+        return (<div>
+            <Link to={{ pathname: '/', state: data }}>
+                <span>Edit</span>
+            </Link>
+        </div>);
     }
 
     private isExpandableRow(row: any) {
@@ -103,9 +136,11 @@ class BSTable extends React.Component<any, {}> {
     render() {
         if (this.props.sectors) {
             return (
-                <BootstrapTable data={this.props.sectors}>
-                    <TableHeaderColumn dataField='sectorName' isKey>Sectors</TableHeaderColumn>
-                </BootstrapTable>);
+                <div>
+                    <BootstrapTable data={this.props.sectors}>
+                        <TableHeaderColumn dataField='sectorName' isKey>Sectors</TableHeaderColumn>
+                    </BootstrapTable>
+                </div>);
         } else {
             return (<p>?</p>);
         }
