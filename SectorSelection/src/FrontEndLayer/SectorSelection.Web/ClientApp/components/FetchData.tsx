@@ -49,7 +49,9 @@ class FetchData extends React.Component<WeatherForecastProps, FetchState> {
         var state = this.state;
         return <div>
             <h1>User's Sectors</h1>
-            <p>This component shows users with sectors. You can edit sectors by clicking related row</p>
+            <p>This component shows users with sectors.</p>
+            <p>You can edit sectors by clicking related row.</p>
+            <p>You can expand rows by clicking first column.</p>
             {this.renderBootStrap(state.userSectors)}
         </div>;
     }

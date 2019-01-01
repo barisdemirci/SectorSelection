@@ -3,7 +3,7 @@ import { RouteComponentProps } from 'react-router-dom';
 import { fetch } from 'domain-task';
 export interface HomeState { sectors: Sector[], name: string, selectedSectors: string[], isLoaded: boolean, agreed: boolean, formValidations: HomeValidation, loadOptionList: boolean, sectorsLoadList: any };
 
-const formValid = (formValidations: any, selectedSectors: string[]) => {
+const formValid = (formValidations: any, name: any, selectedSectors: string[]) => {
     let valid = true;
     //validate form errors being empty
     var agreeCheckBoxElement: any = document.getElementById("agreed");
@@ -20,6 +20,9 @@ const formValid = (formValidations: any, selectedSectors: string[]) => {
     if (selectedSectors.length == 0) {
         valid = false;
         formValidations.sector = "You must select at least one sector. ";
+    }
+    if (selectedSectors.length == 0) {
+        formValidations.name = "Name is required!";
     }
     var values = Object.keys(formValidations).map(function (key) {
         return formValidations[key];
@@ -91,24 +94,24 @@ export default class SectorSelection extends React.Component<RouteComponentProps
                             <input name="name" type="text" onChange={this.nameTextBoxChanged.bind(this)} defaultValue={this.state.name} className={formValidations.name.length == 0 ? "" : "error"} />
                             <div>
                                 {formValidations.name.length > 0 &&
-                                    <span>{formValidations.name}</span>}
+                                    <span className="errormessage">{formValidations.name}</span>}
                             </div>
                         </div>
                     </div>
-                    <div className="clear"/>
+                    <div className="clear" />
                     <div className="sector">
                         <div className="col-sm-2">
                             <label htmlFor="sectors">Sectors:</label>
                         </div>
                         <div className="col-sm-4">
-                            <select id="sectors" name="sectors" multiple onChange={this.sectorSelected.bind(this)} className={formValidations.sector.length == 0 ? "sectors" : "error"}>
+                            <select id="sectors" name="sectors" multiple onChange={this.sectorSelected.bind(this)} className={formValidations.sector.length == 0 ? "sectors" : "sectors error"}>
                                 {this.state.sectors.map(item =>
                                     <option key={item.value} value={item.value}>{item.sectorName}</option>
                                 )}
                             </select>
                             <div>
                                 {formValidations.sector.length > 0 &&
-                                    <span>{formValidations.sector}</span>}
+                                    <span className="errormessage">{formValidations.sector}</span>}
                             </div>
                         </div>
                     </div>
@@ -118,7 +121,7 @@ export default class SectorSelection extends React.Component<RouteComponentProps
                         <label htmlFor="agreed"> Agree to terms </label>
                         <div>
                             {formValidations.agreed.length > 0 &&
-                                <span>{formValidations.agreed}</span>}
+                                <span className="errormessage">{formValidations.agreed}</span>}
                         </div>
                     </div>
                     <div className="clear" />
@@ -149,12 +152,12 @@ export default class SectorSelection extends React.Component<RouteComponentProps
             }
         }
         this.setState({ selectedSectors: selectedSectors });
-        this.state.formValidations.sector = selectedSectors.length == 0 ? "You must select at least one sector " : "";
+        this.state.formValidations.sector = selectedSectors.length == 0 ? "You must select at least one sector!" : "";
     }
 
     private handleSubmit(e: any) {
         e.preventDefault();
-        if (formValid(this.state.formValidations, this.state.selectedSectors)) {
+        if (formValid(this.state.formValidations, this.state.name, this.state.selectedSectors)) {
             this.postSelectedSectors(this.state.name, this.state.selectedSectors);
         }
         else {
